@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class= "top">
+      Activity Page 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,12 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>SELECT BUTTON<br></strong>
+    <ion-button (click)="clickAuthenticate()">Authenticate</ion-button><br>
+    <ion-button (click)="clickUnauthenticate()">Unauthenticate</ion-button><br>
+    <ion-button (click)="showObject()">Show Object</ion-button><br>
+    <div *ngIf="isLoading"> {{loadingText}} </div>
+    <div *ngIf="isHide"><p>{{myArray}}</p></div>
+    <ion-button (click)="addObject()">Add to Object</ion-button><br>
   </div>
 </ion-content>
