@@ -1,38 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './another-page.html',
 })
-export class HomePage implements OnInit{
-  
+export class AnotherPage implements OnInit{
+
   constructor(private authorizationService: AuthenticationService, private router: Router) {}
 
   ngOnInit(): void {
+    this.authorizationService.canProceed = false;
   }
   ionViewWillEnter(){
-    console.log("You will now enter home page.")
+    console.log("You will now enter another page.")
   }
   ionViewDidEnter(){
-    console.log("You did enter home page.")
+    console.log("You did enter another page.")
   }
   ionViewWillLeave(){
-    console.log("You will now leave home page.")
+    console.log("You will now leave another page.")
   }
   ionViewDidLeave(){
-    console.log("You did leave home page.")
+    console.log("You did leave another page.")
   }
-
 
   goWithAuthorization(){
     this.authorizationService.canProceed = true;
   }
-  goToMyCustomPage(){
-    this.router.navigate(["another-page"])
+  goToNextPage(){
+    this.router.navigate(["new-component"])
   }
-  
-
 }
