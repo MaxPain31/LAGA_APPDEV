@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>COMPONENT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        Card Header
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+        Card Content
+    </ion-card-content>
+  </ion-card>
+
+  <div class="container">
+    <div class="btn">
+      <h5>BUTTON</h5>
+      <ion-button color="primary">Primary Button</ion-button><br>
+      <ion-button color="secondary">Secondary Button</ion-button><br>
+      <ion-button color="danger">Danger Button</ion-button><br>
+    </div>
+
+    <div class="component-btn">
+      <h5>MODAL</h5>
+      <ion-button color="primary" (click)="toggleModal()">SETTINGS</ion-button>
+    
+      <h5>ALERT</h5>
+      <ion-button color="primary" (click)="alert()">Alert</ion-button>
+    
+      <h5>TOAST</h5>
+      <ion-button color="primary" (click)="presentToast()">Present Toast</ion-button><br>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+        <ion-fab-button>
+            <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
+
+
