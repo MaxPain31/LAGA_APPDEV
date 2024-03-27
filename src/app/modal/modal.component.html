@@ -26,4 +26,21 @@
             <custom-slider></custom-slider>
         </div>
     </div>
+
+    <div class="container">
+        <div class="btn">
+          <h5>BUTTON</h5>
+          <ion-button color="primary">Primary Button</ion-button><br>
+          <ion-button color="secondary">Secondary Button</ion-button><br>
+          <ion-button color="danger">Danger Button</ion-button><br>
+        </div>
+    
+        <div class="component-btn">
+          <h5>ALERT</h5>
+          <ion-button color="primary" (click)="alert()">Alert</ion-button>
+        
+          <h5>TOAST</h5>
+          <ion-button color="primary" (click)="presentToast()">Present Toast</ion-button><br>
+        </div>
+      </div>
 </ion-content>
